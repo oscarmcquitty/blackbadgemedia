@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page title for browser tab and SEO -->
     <title>BlackBadgeMedia</title>
-    <!-- Import Inter font from Google Fonts for a modern, clean look -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <!-- Import Roboto Mono font for a sleek, monospace look -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+    <!-- Favicon placeholder (upload favicon.png to repo root) -->
+    <link rel="icon" type="image/png" href="favicon.png">
     <!-- Inline CSS for styling -->
     <style>
-        /* Reset default margins and padding for consistency across browsers */
+        /* Reset default margins and padding for consistency */
         * {
             margin: 0;
             padding: 0;
@@ -19,57 +21,69 @@
 
         /* Set body to full viewport height with black background */
         body {
+            font-family: 'Roboto Mono', monospace; /* Monospace font as per example */
+            line-height: 1.6; /* Improve readability */
+            color: #d3d3d3; /* Light grey text color */
             background-color: #000000; /* Pure black background */
-            min-height: 100vh; /* Ensure body takes full viewport height */
-            display: flex; /* Use flexbox for centering */
+            min-height: 100vh; /* Full viewport height */
+            display: flex; /* Flexbox for centering container */
             justify-content: center; /* Center horizontally */
             align-items: center; /* Center vertically */
+            padding: 20px; /* Padding for smaller screens */
         }
 
-        /* Container for the text to ensure centering */
+        /* Container for content, centered on page */
         .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%; /* Full width to adapt to screen */
-            text-align: center; /* Center text for smaller screens */
+            max-width: 600px; /* Limit width like osceng */
+            width: 100%; /* Full width within max */
+            text-align: left; /* Left-align text as requested */
         }
 
-        /* Style the main heading */
-        h1 {
-            font-family: 'Inter', sans-serif; /* Modern, bold font */
-            font-weight: 700; /* Bold weight for emphasis */
-            color: #d3d3d3; /* Light grey text color */
-            font-size: 6vw; /* Responsive font size based on viewport width */
-            line-height: 1.2; /* Improve readability */
-            text-transform: lowercase; /* Ensure consistent lowercase as requested */
+        /* Style paragraphs for text and links */
+        p {
+            margin-bottom: 1rem; /* Space between lines */
+            font-size: clamp(16px, 2.5vw, 18px); /* Responsive font size */
+            font-weight: 400; /* Regular weight for all text */
         }
 
-        /* Responsive breakpoints for different screen sizes */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 8vw; /* Larger relative font size for tablets */
+        /* Style links to match light grey theme */
+        a {
+            color: #d3d3d3; /* Light grey to match text */
+            text-decoration: underline; /* Underline like osceng */
+            transition: color 0.3s ease; /* Smooth hover effect */
+        }
+
+        a:hover {
+            color: #a9a9a9; /* Darker grey on hover */
+        }
+
+        /* Responsive adjustments for tablets */
+        @media (max-width: 600px) {
+            .container {
+                max-width: 100%; /* Full width on smaller screens */
+                padding: 0 15px; /* Side padding */
+            }
+
+            p {
+                font-size: clamp(14px, 2vw, 16px); /* Smaller font for tablets */
             }
         }
 
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 10vw; /* Even larger for mobile phones */
-            }
-        }
-
-        /* For larger screens, cap the font size to avoid being too big */
-        @media (min-width: 1200px) {
-            h1 {
-                font-size: 72px; /* Fixed size for large screens */
+        /* Responsive adjustments for mobile */
+        @media (max-width: 400px) {
+            p {
+                font-size: clamp(12px, 1.8vw, 14px); /* Smaller font for mobile */
             }
         }
     </style>
 </head>
 <body>
-    <!-- Main content: centered text -->
+    <!-- Main content: left-aligned text and links, centered container -->
     <div class="container">
-        <h1>blackbadgemedia</h1>
+        <p>blackbadgemedia</p>
+        <p>Video editing.</p>
+        <p>Contact us: <a href="mailto:contact@blackbadgemedia.com">contact@blackbadgemedia.com</a></p>
+        <p>Portfolio: <a href="mailto:portfolio@blackbadgemedia.com">portfolio@blackbadgemedia.com</a></p>
     </div>
 </body>
 </html>
