@@ -6,10 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page title for browser tab and SEO -->
     <title>BlackBadgeMedia</title>
-    <!-- Link to external stylesheet -->
-    <link rel="stylesheet" href="styles.css">
     <!-- Import Inter font from Google Fonts for a modern, clean look -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <!-- Inline CSS for styling -->
+    <style>
+        /* Reset default margins and padding for consistency across browsers */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Set body to full viewport height with black background */
+        body {
+            background-color: #000000; /* Pure black background */
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+
+        /* Container for the text to ensure centering */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; /* Full width to adapt to screen */
+            text-align: center; /* Center text for smaller screens */
+        }
+
+        /* Style the main heading */
+        h1 {
+            font-family: 'Inter', sans-serif; /* Modern, bold font */
+            font-weight: 700; /* Bold weight for emphasis */
+            color: #d3d3d3; /* Light grey text color */
+            font-size: 6vw; /* Responsive font size based on viewport width */
+            line-height: 1.2; /* Improve readability */
+            text-transform: lowercase; /* Ensure consistent lowercase as requested */
+        }
+
+        /* Responsive breakpoints for different screen sizes */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 8vw; /* Larger relative font size for tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 10vw; /* Even larger for mobile phones */
+            }
+        }
+
+        /* For larger screens, cap the font size to avoid being too big */
+        @media (min-width: 1200px) {
+            h1 {
+                font-size: 72px; /* Fixed size for large screens */
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Main content: centered text -->
